@@ -16,4 +16,4 @@ WORKDIR /app
 RUN bundle install
 
 EXPOSE 5000
-CMD "foreman start"
+CMD ["foreman", "start"]
