@@ -10,7 +10,7 @@ A simple RESTful service that takes in a URL retrieving and storing its content.
 ##### Install
 The easiest way to run the service is to pull down the docker image and run the binary.
 
-1. `docker pull https://quay.io/barkerja/massdrop_website_fetcher`
+1. `docker pull quay.io/barkerja/massdrop_website_fetcher`
 2. `docker run -p 5000:5000 massdrop_website_fetcher`
 
 If you want to build and run the image locally
