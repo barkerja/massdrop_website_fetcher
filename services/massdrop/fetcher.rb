@@ -42,9 +42,10 @@ module Services
       rescue URI::InvalidURIError
         # URI could not parse the given URL
         format_response(error: ERRORS[:invalid_url])
-      rescue Net::OpenTimeout, Net::ReadTimeout
+      rescue Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNREFUSED
         # In a real world scenario, more info would be logged
-        # and possibly the operation retried.
+        # and possibly the operation retried with a backoff and
+        # retry limit.
         format_response(error: ERRORS[:timeout])
       rescue
         # General rescue to catch all other errors
