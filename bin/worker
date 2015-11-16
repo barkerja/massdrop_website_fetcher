@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require '/app/workers/fetch_website'
+Workers::FetchWebsite.run
